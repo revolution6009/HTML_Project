@@ -6,32 +6,31 @@
     <title>Document</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
-    <style></style>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $("#alert1").on("close.bs.alert", function () {
+          alert("Boot กำลังปิด");
+        });
+
+        $("#alert1").on("close.bs.alert", function () {
+          alert("ปิดละ");
+        });
+      });
+    </script>
   </head>
 
   <body>
-    <div class="embed-responsive embed-responsive-21by9">
-      <video
-        src="bbb.mp4"
-        width="320"
-        height="240"
-        preload="auto"
-        controls
-      ></video>
-    </div>
-
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/DDxfJmWcpbE"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+    <div
+      id="alert1"
+      role="alert"
+      class="alert alert-warning alert-dismissible fade show"
+    >
+      ทดลองดู
+      <button class="close" data-dismiss="alert" aria-label="C">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
   </body>
 </html>
